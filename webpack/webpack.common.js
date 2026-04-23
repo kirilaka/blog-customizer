@@ -7,6 +7,11 @@ const webpack = require('webpack');
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
+	devServer: {
+  client: {
+    overlay: false,
+  },
+},
 	entry: path.resolve(__dirname, '..', './src/index.tsx'), //точка входа в наше приложение содержит абсолютный путь к index.ts
 	output: {
 		path: path.resolve(__dirname, '..', './dist'), //путь куда будет собираться наш проект

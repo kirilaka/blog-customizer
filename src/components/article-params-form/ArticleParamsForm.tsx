@@ -35,14 +35,13 @@ export const ArticleParamsForm = ({ onChangeForm }: Props) => {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside)
 		}
-	}, [])
+	}, [isOpen])
 	
 	const handleChange = (key: string, value: OptionType) => {
 		setFormState((prev) => ({
 			...prev,
 			[key]: value,
 		}));
-		console.log(value,)
 	};
 	
 	const handleReset = () => {
