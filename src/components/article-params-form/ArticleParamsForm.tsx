@@ -23,6 +23,7 @@ export const ArticleParamsForm = ({ onChangeForm }: Props) => {
 	}
 
 	useEffect(() => {
+		if (!isOpen) return;
 		const handleClickOutside = (event: MouseEvent) => {
 			if(
 				sidebarRef.current &&
